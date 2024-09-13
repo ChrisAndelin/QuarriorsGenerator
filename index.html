@@ -2,7 +2,95 @@
 <html>
 <head>
   <title>Quarriors Card Selector</title>
-  <script src="quarriors_gui.py"></script>  </head>
-<body>
-  </body>
-</html>
+  <script>
+  // Card class (represents a single card)
+  function Card(type, name, subName, set, cost, glory, lvd) {
+    this.type = type;
+    this.name = name;
+    this.subName = subName;
+    this.set = set;
+    this.cost = cost;
+    this.glory = glory;
+    this.lvd = lvd;
+  }
+
+  // Function to display a card with formatting
+  function displayCard(card) {
+    return `<span class="math-inline">\{card\.name\} \(</span>{card.subName || ""}) - ${card.set}`;
+  }
+
+  // Function to load card data from a CSV file (simulated)
+  function loadCardsFromCsv(filename) {
+    // Replace this with actual logic to fetch data from CSV (e.g., using AJAX)
+    const cards = [
+      // Sample card data (replace with your actual data)
+      new Card("Spell", "Ballista", "", "Base Game", 3, 0, ""),
+      new Card("Creature", "Quarry", "", "Base Game", 2, 2, ""),
+      // ... add more card data
+    ];
+    return cards;
+  }
+
+  // Function to choose cards based on desired sets
+  function chooseCards(allCards, desiredSets) {
+    const chosenSpells = [];
+    const chosenCreatures = [];
+
+    const filteredCards = allCards.filter(card => desiredSets.includes(card.set));
+
+    for (const card of filteredCards) {
+      if (card.type === "Spell" && chosenSpells.length < 3) {
+        const randomSpellIndex = Math.floor(Math.random() * filteredCards.length);
+        const randomSpell = filteredCards[randomSpellIndex];
+        if (!chosenSpells.find(spell => spell.name === randomSpell.name)) {
+          chosenSpells.push(randomSpell);
+        }
+      } else if (card.type === "Creature" && chosenCreatures.length < 7) {
+        const randomCreatureIndex = Math.floor(Math.random() * filteredCards.length);
+        const randomCreature = filteredCards[randomCreatureIndex];
+        if (!chosenCreatures.find(creature => creature.name === randomCreature.name)) {
+          chosenCreatures.push(randomCreature);
+        }
+      }
+    }
+
+    return [chosenSpells, chosenCreatures];
+  }
+
+  // Function to update the displayed cards (replace with your HTML element manipulation)
+  function updateCardDisplay(chosenSpells, chosenCreatures) {
+    const spellListElement = document.getElementById("chosen-spells");
+    const creatureListElement = document.getElementById("chosen-creatures");
+
+    spellListElement.innerHTML = chosenSpells.map(displayCard).join("<br>");
+    creatureListElement.innerHTML = chosenCreatures.map(displayCard).join("<br>");
+  }
+
+  // Function to handle button click (replace with your button event listener)
+  function handleButtonClick() {
+    // Get desired sets from checkboxes (replace with your logic)
+    const desiredSets = []; // Replace with logic to get selected sets from checkboxes
+    const allCards = loadCardsFromCsv("quarriors_cards.csv"); // Replace with actual file path
+    const [chosenSpells, chosenCreatures] = chooseCards(allCards, desiredSets);
+    updateCardDisplay(chosenSpells, chosenCreatures);
+  }
+
+  // Load cards (simulated data for now)
+  const allCards = loadCardsFromCsv("quarriors_cards.csv");
+
+  // Placeholder for future:
+  // const window = document.getElementById("your-main-window-element"); // Assuming an element with this ID exists
+
+  // Create elements for user interface (replace with your HTML structure)
+  const instructionElement = document.createElement("p");
+  instructionElement.textContent = "Select desired sets and click 'Choose Cards':";
+  document.body.appendChild(instructionElement);
+
+  // Placeholder checkboxes (replace with your actual logic)
+  const setCheckboxes = []; // Replace with logic to create and manage checkboxes
+
+  // Create button (replace with your HTML button)
+  const button = document.createElement("button");
+  button.textContent = "Choose Cards";
+  button.addEventListener("click", handleButtonClick);
+  document.
