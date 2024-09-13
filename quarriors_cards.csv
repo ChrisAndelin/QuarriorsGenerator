@@ -1,0 +1,180 @@
+Type,Name,Sub Name,Set,Cost,Glory,LvD
+Basic,Assistant,,Base Game,1,1,
+Basic,Assistant,of Acquisition,Light vs Dark,1,1,
+Basic,Assistant,of Economics,Light vs Dark,1,1,
+Basic,Assistant,of Logistics,Light vs Dark,1,1,
+Basic,Basic Quiddity,,Base Game,0,,
+Basic,Corrupted Quiddity,,Rise of the Demons,,,
+Basic,Portal,,Base Game,4,,
+Basic,Squire,,Quartifacts,1,1,
+Quest,Exqualibur,The Expedition For,Quartifacts,2,3,
+Quest,Exqualibur,The Hunt For,Quartifacts,2,3,
+Quest,Exqualibur,The Quest For,Quartifacts,2,3,
+Quest,Exqualibur,The Search For,Quartifacts,2,3,
+Quest,The Holy Quail,The Expedition For,Quartifacts,1,2,
+Quest,The Holy Quail,The Hunt For,Quartifacts,1,2,
+Quest,The Holy Quail,The Quest For,Quartifacts,1,2,
+Quest,The Holy Quail,The Search For,Quartifacts,1,2,
+Quest,The Tri-Clops Skull,The Expedition For,Quartifacts,3,4,
+Quest,The Tri-Clops Skull,The Hunt For,Quartifacts,3,4,
+Quest,The Tri-Clops Skull,The Quest For,Quartifacts,3,4,
+Quest,The Tri-Clops Skull,The Search For,Quartifacts,3,4,
+Spell,Chaos,Cantrip,Quest of the Qladiator,7,,
+Spell,Chaos,Charm,Quest of the Qladiator,5,,
+Spell,Chaos,Incantation,Quest of the Qladiator,5,,
+Spell,Chaos,Spell,Quest of the Qladiator,3,,
+Spell,Corruption,Cantrip,Rise of the Demons,2,,
+Spell,Corruption,Charm,Rise of the Demons,2,,
+Spell,Corruption,Incantation,Rise of the Demons,6,,
+Spell,Corruption,Spell,Rise of the Demons,3,,
+Spell,Dark,Cantrip,Light vs Dark,3,,Dark
+Spell,Dark,Charm,Light vs Dark,4,,Dark
+Spell,Dark,Enchantment,Light vs Dark,6,,Dark
+Spell,Dark,Incantation,Light vs Dark,4,,Dark
+Spell,Dark,Spell,Light vs Dark,5,,Dark
+Spell,Death,Cantrip,Base Game,4,,
+Spell,Death,Charm,Base Game,5,,
+Spell,Death,Incantation,Base Game,5,,
+Spell,Death,Spell,Base Game,6,,
+Spell,Discriminating,Cantrip,Quarmageddon,4,,
+Spell,Discriminating,Charm,Quarmageddon,4,,
+Spell,Discriminating,Incantation,Quarmageddon,3,,
+Spell,Discriminating,Spell,Quarmageddon,3,,
+Spell,Growth,Cantrip,Base Game,3,,
+Spell,Growth,Charm,Base Game,5,,
+Spell,Growth,Incantation,Base Game,5,,
+Spell,Growth,Spell,Base Game,4,,
+Spell,Harmony,Cantrip,Quest of the Qladiator,5,,
+Spell,Harmony,Charm,Quest of the Qladiator,3,,
+Spell,Harmony,Incantation,Quest of the Qladiator,4,,
+Spell,Harmony,Spell,Quest of the Qladiator,3,,
+Spell,Life,Cantrip,Base Game,3,,
+Spell,Life,Charm,Base Game,3,,
+Spell,Life,Incantation,Base Game,4,,
+Spell,Life,Spell,Base Game,4,,
+Spell,Light,Cantrip,Light vs Dark,3,,Light
+Spell,Light,Charm,Light vs Dark,3,,Light
+Spell,Light,Enchantment,Light vs Dark,5,,Light
+Spell,Light,Incantation,Light vs Dark,4,,Light
+Spell,Light,Spell,Light vs Dark,4,,Light
+Spell,Misdirection,Cantrip,Quartifacts,2,,
+Spell,Misdirection,Charm,Quartifacts,3,,
+Spell,Misdirection,Incantation,Quartifacts,6,,
+Spell,Misdirection,Spell,Quartifacts,4,,
+Spell,Oblation,Cantrip,Quarmageddon,3,,
+Spell,Oblation,Charm,Quarmageddon,5,,
+Spell,Oblation,Incantation,Quarmageddon,2,,
+Spell,Oblation,Spell,Quarmageddon,2,,
+Spell,Quasar,Cantrip,Quartifacts,3,,
+Spell,Quasar,Charm,Quartifacts,3,,
+Spell,Quasar,Incantation,Quartifacts,6,,
+Spell,Quasar,Spell,Quartifacts,6,,
+Spell,Shaping,Cantrip,Base Game,4,,
+Spell,Shaping,Charm,Base Game,3,,
+Spell,Shaping,Incantation,Base Game,4,,
+Spell,Shaping,Spell,Base Game,3,,
+Spell,Victory,Cantrip,Base Game,3,,
+Spell,Victory,Charm,Base Game,5,,
+Spell,Victory,Incantation,Base Game,9,,
+Spell,Victory,Spell,Base Game,7,,
+Creature,Ancient Guide,,Quartifacts,2,2,
+Creature,Ancient Guide,Strong,Quartifacts,3,2,
+Creature,Ancient Guide,Mighty,Quartifacts,3,2,
+Creature,Archangel,,Light vs Dark,8,3,Light
+Creature,Archangel,Lesser,Light vs Dark,8,3,Light
+Creature,Archangel,Greater,Light vs Dark,9,4,Light
+Creature,Archangel,Strong,Light vs Dark,8,3,Light
+Creature,Archangel,Mighty,Light vs Dark,8,3,Light
+Creature,Black Cat,,Light vs Dark,3,2,Dark
+Creature,Black Cat,Lesser,Light vs Dark,3,2,Dark
+Creature,Black Cat,Greater,Light vs Dark,4,2,Dark
+Creature,Black Cat,Strong,Light vs Dark,4,2,Dark
+Creature,Black Cat,Mighty,Light vs Dark,4,2,Dark
+Creature,Boogieman,,Light vs Dark,5,2,Dark
+Creature,Boogieman,Lesser,Light vs Dark,5,2,Dark
+Creature,Boogieman,Greater,Light vs Dark,6,3,Dark
+Creature,Boogieman,Strong,Light vs Dark,5,2,Dark
+Creature,Boogieman,Mighty,Light vs Dark,6,3,Dark
+Creature,Deathdealer,,Base Game,3,2,
+Creature,Deathdealer,Strong,Base Game,6,2,
+Creature,Deathdealer,Mighty,Base Game,6,2,
+Creature,Deathdealer,Corrupted,Rise of the Demons,3,4,
+Creature,Defender of the Pale,,Base Game,5,2,
+Creature,Defender of the Pale,Strong,Base Game,6,3,
+Creature,Defender of the Pale,Mighty,Base Game,6,3,
+Creature,Defender of the Pale,Corrupted,Rise of the Demons,6,2,
+Creature,Demonic Overlord,,Rise of the Demons,8,5,
+Creature,Demonic Overlord,Lesser,Rise of the Demons,8,4,
+Creature,Demonic Overlord,Strong,Rise of the Demons,9,4,
+Creature,Demonic Overlord,Mighty,Rise of the Demons,9,5,
+Creature,Devotee of the Holy Query,,Base Game,3,2,
+Creature,Devotee of the Holy Query,Strong,Base Game,4,2,
+Creature,Devotee of the Holy Query,Mighty,Base Game,4,2,
+Creature,Devotee of the Holy Query,Corrupted,Rise of the Demons,3,2,
+Creature,Frost Howler,,Quest of the Qladiator,7,2,
+Creature,Frost Howler,Strong,Quest of the Qladiator,7,3,
+Creature,Frost Howler,Mighty,Quest of the Qladiator,8,3,
+Creature,Ghostly Spirit,,Base Game,3,2,
+Creature,Ghostly Spirit,Strong,Base Game,4,2,
+Creature,Ghostly Spirit,Mighty,Base Game,4,2,
+Creature,Ghostly Spirit,Corrupted,Rise of the Demons,4,3,
+Creature,Ghostly Spirit,Ghost of X-Mas Past,X-Mas Promos,4,2,
+Creature,Ghostly Spirit,Ghost of X-Mas Present,X-Mas Promos,4,2,
+Creature,Ghostly Spirit,Ghost of X-Mas Future,X-Mas Promos,4,2,
+Creature,Gnome Barbarian,,Quarmageddon,4,2,
+Creature,Gnome Barbarian,Strong,Quarmageddon,5,2,
+Creature,Gnome Barbarian,Mighty,Quarmageddon,5,3,
+Creature,Heavenly Seraph,,Quarmageddon,7,3,
+Creature,Heavenly Seraph,Strong,Quarmageddon,7,3,
+Creature,Heavenly Seraph,Mighty,Quarmageddon,8,4,
+Creature,Herald,,Light vs Dark,3,2,Light
+Creature,Herald,Lesser,Light vs Dark,3,2,Light
+Creature,Herald,Greater,Light vs Dark,4,2,Light
+Creature,Herald,Strong,Light vs Dark,3,2,Light
+Creature,Herald,Mighty,Light vs Dark,4,2,Light
+Creature,Knight of Quamelot,,Quartifacts,7,3,
+Creature,Knight of Quamelot,Strong,Quartifacts,7,3,
+Creature,Knight of Quamelot,Mighty,Quartifacts,7,3,
+Creature,Lord of the Quarry,,Quarmageddon,7,3,
+Creature,Lord of the Quarry,Strong,Quarmageddon,8,3,
+Creature,Lord of the Quarry,Mighty,Quarmageddon,8,4,
+Creature,Lord of the Quarry,Key Master,Quest of the Qladiator Promo,7,3,
+Creature,Manxome Minotaur,,Quartifacts,8,4,
+Creature,Manxome Minotaur,Strong,Quartifacts,8,3,
+Creature,Manxome Minotaur,Mighty,Quartifacts,9,4,
+Creature,Mischievous Imp,,Quarmageddon,2,2,
+Creature,Mischievous Imp,Strong,Quarmageddon,4,2,
+Creature,Mischievous Imp,Mighty,Quarmageddon,5,2,
+Creature,Mischievous Imp,Multiplying,Quarmageddon Promo,3,2,
+Creature,Pink Eye Cyclops,,Quest of the Qladiator,5,3,
+Creature,Pink Eye Cyclops,Strong,Quest of the Qladiator,6,2,
+Creature,Pink Eye Cyclops,Mighty,Quest of the Qladiator,7,4,
+Creature,Poison Dart Frog,,Quest of the Qladiator,3,3,
+Creature,Poison Dart Frog,Strong,Quest of the Qladiator,2,4,
+Creature,Poison Dart Frog,Mighty,Quest of the Qladiator,3,2,
+Creature,Primordial Ooze,,Base Game,8,2,
+Creature,Primordial Ooze,Strong,Base Game,7,2,
+Creature,Primordial Ooze,Mighty,Base Game,5,3,
+Creature,Primordial Ooze,Corrupted,Rise of the Demons,6,2,
+Creature,Qladiator,,Quest of the Qladiator,6,3,
+Creature,Qladiator,Strong,Quest of the Qladiator,7,3,
+Creature,Qladiator,Mighty,Quest of the Qladiator,8,3,
+Creature,Quake Dragon,,Base Game,8,4,
+Creature,Quake Dragon,Strong,Base Game,8,4,
+Creature,Quake Dragon,Mighty,Base Game,9,4,
+Creature,Quake Dragon,Corrupted,Rise of the Demons,9,4,
+Creature,Quake Dragon,Quaxos',Quaxos' Promos,9,3,
+Creature,Quake Dragon Mystic,,Quest of the Qladiator,4,3,
+Creature,Quake Dragon Mystic,Strong,Quest of the Qladiator,4,3,
+Creature,Quake Dragon Mystic,Mighty,Quest of the Qladiator,6,3,
+Creature,Quartz Golem,,Light vs Dark,5,2,Light
+Creature,Quartz Golem,Lesser,Light vs Dark,5,2,Light
+Creature,Quartz Golem,Greater,Light vs Dark,6,3,Light
+Creature,Quartz Golem,Strong,Light vs Dark,5,2,Light
+Creature,Quartz Golem,Mighty,Light vs Dark,6,3,Light
+Creature,Quaxos' Eye,,Quest of the Qladiator,3,3,
+Creature,Quaxos' Eye,Strong,Quest of the Qladiator,3,2,
+Creature,Quaxos' Eye,Mighty,Quest of the Qladiator,3,2,
+Creature,Queelzebub,,Light vs Dark,8,3,Dark
+Creature,Queelzebub,Lesser,Light vs Dark,8,3,Dark
+Creature,Queelzebub,Greater,Light,,,
