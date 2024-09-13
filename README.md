@@ -1,1 +1,2 @@
 # QuarriorsGenerator
+Deploy v0
