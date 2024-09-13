@@ -2,95 +2,93 @@
 <html>
 <head>
   <title>Quarriors Card Selector</title>
+</head>
+<body>
+  <h1>Quarriors Card Selector</h1>
+
+  <label for="desired-sets">Select Desired Sets:</label>
+  <input type="text" id="desired-sets" placeholder="Enter sets (comma-separated)">
+
+  <button onclick="chooseCards()">Choose Cards</button>
+
+  <div id="chosen-spells"></div>
+  <div id="chosen-creatures"></div>
+
   <script>
-  // Card class (represents a single card)
-  function Card(type, name, subName, set, cost, glory, lvd) {
-    this.type = type;
-    this.name = name;
-    this.subName = subName;
-    this.set = set;
-    this.cost = cost;
-    this.glory = glory;
-    this.lvd = lvd;
-  }
+    // Card class (represents a single card)
+    function Card(type, name, subName, set, cost, glory, lvd) {
+      this.type = type;
+      this.name = name;
+      this.subName = subName;
+      this.set = set;
+      this.cost = cost;
+      this.glory = glory;
+      this.lvd = lvd;
+    }
 
-  // Function to display a card with formatting
-  function displayCard(card) {
-    return `<span class="math-inline">\{card\.name\} \(</span>{card.subName || ""}) - ${card.set}`;
-  }
+    // Function to display a card with formatting
+    function displayCard(card) {
+      return `${card.name} (${card.subName || ""}) - ${card.set}`;
+    }
 
-  // Function to load card data from a CSV file (simulated)
-  function loadCardsFromCsv(filename) {
-    // Replace this with actual logic to fetch data from CSV (e.g., using AJAX)
-    const cards = [
-      // Sample card data (replace with your actual data)
-      new Card("Spell", "Ballista", "", "Base Game", 3, 0, ""),
-      new Card("Creature", "Quarry", "", "Base Game", 2, 2, ""),
-      // ... add more card data
-    ];
-    return cards;
-  }
+    // Function to load card data from a CSV file (simulated)
+    function loadCardsFromCsv() {
+      const csvFile = "quarriors_cards.csv";
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", csvFile, false); // Use synchronous request for simplicity
+      xhr.send();
 
-  // Function to choose cards based on desired sets
-  function chooseCards(allCards, desiredSets) {
-    const chosenSpells = [];
-    const chosenCreatures = [];
-
-    const filteredCards = allCards.filter(card => desiredSets.includes(card.set));
-
-    for (const card of filteredCards) {
-      if (card.type === "Spell" && chosenSpells.length < 3) {
-        const randomSpellIndex = Math.floor(Math.random() * filteredCards.length);
-        const randomSpell = filteredCards[randomSpellIndex];
-        if (!chosenSpells.find(spell => spell.name === randomSpell.name)) {
-          chosenSpells.push(randomSpell);
+      if (xhr.status === 200) {
+        const csvData = xhr.responseText;
+        // Parse the CSV data and create Card objects (your logic here)
+        const cards = [];
+        const lines = csvData.split("\n");
+        const headers = lines[0].split(",");
+        for (let i = 1; i < lines.length; i++) {
+          const row = lines[i].split(",");
+          const cardData = {};
+          for (let j = 0; j < headers.length; j++) {
+            cardData[headers[j]] = row[j];
+          }
+          cards.push(new Card(
+            cardData.type,
+            cardData.name,
+            cardData.subName,
+            cardData.set,
+            parseInt(cardData.cost),
+            parseInt(cardData.glory),
+            cardData.lvd
+          ));
         }
-      } else if (card.type === "Creature" && chosenCreatures.length < 7) {
-        const randomCreatureIndex = Math.floor(Math.random() * filteredCards.length);
-        const randomCreature = filteredCards[randomCreatureIndex];
-        if (!chosenCreatures.find(creature => creature.name === randomCreature.name)) {
-          chosenCreatures.push(randomCreature);
-        }
+        return cards;
+      } else {
+        console.error("Error loading CSV file:", xhr.status, xhr.statusText);
+        return [];
       }
     }
 
-    return [chosenSpells, chosenCreatures];
-  }
+    // Function to choose cards based on desired sets
+    function chooseCards() {
+      const desiredSets = document.getElementById("desired-sets").value.split(",");
+      const allCards = loadCardsFromCsv();
+      const [chosenSpells, chosenCreatures] = chooseCards(allCards, desiredSets);
+      updateCardDisplay(chosenSpells, chosenCreatures);
+    }
 
-  // Function to update the displayed cards (replace with your HTML element manipulation)
-  function updateCardDisplay(chosenSpells, chosenCreatures) {
-    const spellListElement = document.getElementById("chosen-spells");
-    const creatureListElement = document.getElementById("chosen-creatures");
+    // Function to update the displayed cards
+    function updateCardDisplay(chosenSpells, chosenCreatures) {
+      const spellListElement = document.getElementById("chosen-spells");
+      const creatureListElement = document.getElementById("chosen-creatures");
 
-    spellListElement.innerHTML = chosenSpells.map(displayCard).join("<br>");
-    creatureListElement.innerHTML = chosenCreatures.map(displayCard).join("<br>");
-  }
+      spellListElement.innerHTML = chosenSpells.map(displayCard).join("<br>");
+      creatureListElement.innerHTML = chosenCreatures.map(displayCard).join("<br>");
+    }
 
-  // Function to handle button click (replace with your button event listener)
-  function handleButtonClick() {
-    // Get desired sets from checkboxes (replace with your logic)
-    const desiredSets = []; // Replace with logic to get selected sets from checkboxes
-    const allCards = loadCardsFromCsv("quarriors_cards.csv"); // Replace with actual file path
-    const [chosenSpells, chosenCreatures] = chooseCards(allCards, desiredSets);
-    updateCardDisplay(chosenSpells, chosenCreatures);
-  }
+    // Load cards (simulated data for now)
+    const allCards = loadCardsFromCsv();
 
-  // Load cards (simulated data for now)
-  const allCards = loadCardsFromCsv("quarriors_cards.csv");
-
-  // Placeholder for future:
-  // const window = document.getElementById("your-main-window-element"); // Assuming an element with this ID exists
-
-  // Create elements for user interface (replace with your HTML structure)
-  const instructionElement = document.createElement("p");
-  instructionElement.textContent = "Select desired sets and click 'Choose Cards':";
-  document.body.appendChild(instructionElement);
-
-  // Placeholder checkboxes (replace with your actual logic)
-  const setCheckboxes = []; // Replace with logic to create and manage checkboxes
-
-  // Create button (replace with your HTML button)
-  const button = document.createElement("button");
-  button.textContent = "Choose Cards";
-  button.addEventListener("click", handleButtonClick);
-  document.
+    // Set up event listener for the button
+    document.getElementById("choose-cards-button").addEventListener("click", chooseCards);
+  </script>
+</body>
+</html>
